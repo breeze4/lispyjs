@@ -1,0 +1,10 @@
+{
+  "name": "lispy-js",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
