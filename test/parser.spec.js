@@ -1,9 +1,13 @@
 var assert = require('assert');
-describe('Array', function() {
-    describe('#indexOf()', function () {
-        it('should return -1 when the value is not present', function () {
-            assert.equal(-1, [1,2,3].indexOf(5));
-            assert.equal(-1, [1,2,3].indexOf(0));
+var interpreter = require('../src/interpreter');
+
+describe('Parser', function() {
+    describe('tokenizer', function () {
+        it('should replace the braces with braces with spaces and then split', function () {
+            var input = "(begin (define r 10) (* pi (* r r)))";
+            var expected = ['(', 'begin', '(', 'define', 'r', '10', ')', '(', '*', 'pi', '(', '*', 'r', 'r', ')', ')', ')'];
+            var actual = interpreter.tokenize(input);
+            assert.deepEqual(expected, actual);
         });
     });
 });
