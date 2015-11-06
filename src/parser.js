@@ -41,4 +41,4 @@ module.exports = {
     tokenize: tokenize,
     readFromTokens: readFromTokens,
     parse: parse
-}
+};
