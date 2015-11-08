@@ -46,6 +46,7 @@ function atom(token) {
 }
 
 function parse(program) {
+    // returns nested array of expressions and subexpressions from the program input
     return readFromTokens(tokenize(program));
 }
 
